@@ -29,7 +29,7 @@ $myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個lo
 				"messages" => array (
 					array (
 						"type" => "text",
-						"text" => "Hello, YOU SAY:http://mama2015.pixnet.net/blog/post/359541396-驗孕棒的逆襲%2B判定日".$sender_txt
+						"text" => "Hello, YOU SAY ".$sender_txt
 					)
 				)
 			);
@@ -104,6 +104,11 @@ $myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個lo
 					)
 				)
 			);
+        		break;
+		 default:
+			$myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個log.txt 用來印訊息
+ fwrite($myfile, "\xEF\xBB\xBF"."abc"); //在字串前加入\xEF\xBB\xBF轉成utf8格式
+ fclose($myfile);
         		break;
  }
  //回傳給line server
