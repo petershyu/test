@@ -29,7 +29,7 @@ $myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個lo
 				"messages" => array (
 					array (
 						"type" => "text",
-						"text" => "Hello, YOU SAY ".$sender_txt
+						"text" => "Hello, YOU SAY:http://mama2015.pixnet.net/blog/post/359541396-驗孕棒的逆襲%2B判定日".$sender_txt
 					)
 				)
 			);
