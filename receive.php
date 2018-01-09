@@ -14,11 +14,11 @@
 				)
 		);
  $myfile = fopen("log.txt","w+") or die("Unable to open file!"); //設定一個log.txt 用來印訊息
- fwrite($myfile, "\xEF\xBB\xBF".json_decode($json_obj)); //在字串前加入\xEF\xBB\xBF轉成utf8格式
+ fwrite($myfile, "\xEF\xBB\xBF".json_encode($response)); //在字串前加入\xEF\xBB\xBF轉成utf8格式
  fclose($myfile);
  //回傳給line server
  $header[] = "Content-Type: application/json";
- $header[] = "Authorization: Bearer wjAIvu5suY4cbWpD6ShBFxf30+PW/1/ibKNd054ZoTiM95fKTuBZd9LtKHX+BPTAJvBkVTIPrVj3oyj5qYGIQ+ovr+cczOzWKtm7uJmdHEQ7Th7uCUDpE7tPrJHzBzFmd6/jJ065IZsz+NLHCHuF3AdB04t89/1O/w1cDnyilFU=";
+ $header[] = "Authorization: Bearer wjAIvu5suY4cbWpD6ShBFxf30+PW/1/ibKNd054ZoTiM95fKTuBZd9LtKHX+BPTAJvBkVTIPrVj3oyj5qYGIQ+ovr+cczOzWKtm7uJmdHEQ7Th7uCUDpE7tPrJHzBzFmd6/jJ065IZsz+NLHCHuF3AdB04t89/1O/w1cDnyilFU=";//要去LINE複製來改 Channel access token (long-lived)
  $ch = curl_init("https://api.line.me/v2/bot/message/push");                                                                      
  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));                                                                  
