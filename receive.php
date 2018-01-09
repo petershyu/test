@@ -74,14 +74,3 @@ $header[] = "Content-Type: application/json";
  $result = curl_exec($ch);
  curl_close($ch); 
 ?>
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
