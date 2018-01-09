@@ -26,7 +26,7 @@
 				"messages" => array (
 					array (
 						"type" => "text",
-						"text" => "Hello, YOU SAY ".$sender_txt
+						"text" => "Hello!!!, YOU SAY ".$sender_txt
 					)
 				)
 			);
